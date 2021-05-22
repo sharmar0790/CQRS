@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: producer
+  jpa:
+    show-sql: true
+  kafka:
+    producer:
+      bootstrap-servers: broker:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+server:
+  port: 9090
+
+topic:
+  producer: booking
+
+springdoc:
+  api-docs:
+    path: /api-docs
+
+logging:
+  level:
+    root: DEBUG
+    org.springframework.data: debug
+    org.springframework: ERROR
+
+
+---
+#mongo db configuration
+spring:
+  data:
+    mongodb:
+      host: mongo1
+      port: 27017
+      database: flightbooking
+      authentication-database: admin
+

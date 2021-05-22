@@ -1,0 +1,17 @@
+version: '3.6'
+
+services:
+  producer:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: producer
+    ports:
+      - "9090:9090"
+    networks:
+      - localnet
+
+
+networks:
+  localnet:
+    name: localnet
