@@ -2,7 +2,7 @@
 
 ### High level architecture
 
-![High-Level-Architecture](images/arch_cqrs.jpg)
+![High-Level-Architecture](images/arch-cqrs.jpg)
 
 
 
